@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "quotes": [
+            "error",
+            "double"
+        ], //esto es para que las strings sean siempre dobles
+        "semi": [
+            "error",
+            "always"
+        ], //esto para que que requiera ; al final siempre
+        "@typescript-eslint/no-explicit-any": [
+            "error",
+            {
+                "fixToUnknown": true
+            }
+        ], //no permite el tipo any
+        "curly": "error", //las sentencias de control enre {}
+        "no-empty": "error" //so se poeden dejar interfaces, funciones etc en blanco
+    }
+}
